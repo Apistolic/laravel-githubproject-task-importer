@@ -1,0 +1,36 @@
+{
+    "name": "geobehr/stolic-tasks-githubproject",
+    "description": "A Laravel package to import Markdown task lists into GitHub Projects",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Geobehr\\StolicTasksGithubproject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "geobehr",
+            "email": "geo@behrs.org"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0",
+        "graham-campbell/github": "^11.0",
+        "league/commonmark": "^2.4"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Geobehr\\StolicTasksGithubproject\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

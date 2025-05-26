@@ -1,0 +1,14 @@
+/vendor/
+/node_modules/
+/tests/output/
+/coverage/
+*.log
+/.phpunit.result.cache
+/.vscode
+/.idea
+composer.lock
+package-lock.json
+.php_cs.cache
+*.swp
+*.swo
+.DS_Store

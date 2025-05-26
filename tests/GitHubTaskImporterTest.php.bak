@@ -1,0 +1,21 @@
+<?php
+
+namespace Geobehr\StolicTasksGithubproject\Tests;
+
+use Geobehr\StolicTasksGithubproject\MarkdownTaskParser;
+use PHPUnit\Framework\TestCase;
+
+class GitHubTaskImporterTest extends TestCase
+{
+    public function testTaskExtraction()
+    {
+        $parser = new MarkdownTaskParser();
+        $markdown = "- [ ] Task 1\n- [x] Task 2";
+        $tasks = $parser->extractTasks($markdown);
+
+        $this->assertEquals([
+            ['title' => 'Task 1', 'completed' => false],
+            ['title' => 'Task 2', 'completed' => true],
+        ], $tasks);
+    }
+}
